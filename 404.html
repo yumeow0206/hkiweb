@@ -37,6 +37,36 @@
       <h1>鬼子？神聖？九龍？</h1>
       <h2>你點進來是不是想偷看？ 想的美：）</h2>
       <p>404 page - 此頁面已過期，你是在這之後 第 <img src="https://www.f-counter.net/j/46/1622362430/"> 個偷看的。</p>
+      
+      <!--  官方說明文件：https://limonte.github.io/sweetalert2/ -->
+
+      <!-- 引用css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.9/sweetalert2.min.css">
+
+
+      <div class="container">
+       <!-- 要觸發的a或button加上class="js-trigger-alert" -->
+       <button class="js-trigger-alert">我為什麼會看到這個頁面 ？</button>
+      </div>
+
+
+      <!-- 引用js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.9/sweetalert2.min.js"></script>
+      <script>
+       var openAlert = function() {
+        swal({
+         title: "若您是從正當管道進入!", // 標題
+         html: "<p>由於此連結已經失效</p><p>麻煩請點擊頁面上方 Discord 按鈕</p><p>獲取最新的連結</p>", // 內文，可以放html
+         type: "warning", // icon的圖片，有以下幾種：error, warning, success, info, question
+         confirmButtonText: "關閉" // 關閉按鈕顯示的文字
+        });
+       };
+       var triggerBtn = document.querySelector(".js-trigger-alert");
+       triggerBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        openAlert();
+       });
+      </script>
 
 
       <!--<footer class="site-footer">
